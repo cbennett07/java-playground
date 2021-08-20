@@ -6,8 +6,17 @@ public class Application {
 
     public static void main(String [] args) {
 
+        Picture myPicture = new Picture(10,20);
+        //myPicture.setFramed(true);
+        System.out.println(myPicture.isFramed());
 
-        //constructor example
+        /*classes example
+            Fruit banana = new Fruit("M", "banana", "yellow");
+
+            System.out.println(banana.toString());
+*/
+
+        /*constructor example
         class Order {
             private String orderNumber;
             private String name;
@@ -30,7 +39,7 @@ public class Application {
             public LocalDateTime getCreatedDate() {
                 return createdDate;
             }
-        }//
+        }*/
 
 
 
