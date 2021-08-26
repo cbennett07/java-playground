@@ -1,14 +1,61 @@
 package com.galvanize;
 
-import java.time.LocalDateTime;
+//import java.time.LocalDateTime;
+
+import java.io.IOException;
+import java.nio.channels.Channel;
+import java.sql.Array;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.*;
+import java.lang.String;
 
 public class Application {
 
     public static void main(String [] args) {
+        Accumulator acc = new Accumulator();
+        List<Integer> input = Arrays.asList(1,2,3,4,5);
 
-        Picture myPicture = new Picture(10,20);
+        //System.out.println(acc.sum(input));
+
+        //System.out.println(acc.longWords("CHRISTOPHER,A,BENNETT", 6));
+
+        //create array and pass it into the toSentence method and write out formatted list
+        String[] myArray = new String[]{"Chris","Andrea","Carter","Dylan","Rambo","Lulu"};
+        System.out.println(acc.toSentence(myArray));
+    }
+
+
+    /*
+    public HashMap<Integer, String> genHashMap() {
+        HashMap<Integer, String> myHashMap = new HashMap<>();
+        myHashMap.put(747, "Airplane");
+        myHashMap.put(10, "Laphroaig");
+        return myHashMap;
+    }*/
+
+    /* Implement the sortArray method below
+    public ArrayList<String> sortArray(String[] inputArray) {
+
+        ArrayList<String> myAList = new ArrayList<>(Arrays.asList(inputArray));
+        myAList.sort(null);
+        return myAList;
+    }*/
+
+
+        /*Picture myPicture = new Picture(10,20);
         //myPicture.setFramed(true);
         System.out.println(myPicture.isFramed());
+
+        Picture StarryNight = new Picture(true,15,15);
+        System.out.println(StarryNight.toString());
+
+        Picture myNewPicture = new Picture(15);
+        System.out.println(myNewPicture.toString());
+
+        Picture MonaLisa = new Picture();
+        System.out.println(MonaLisa.toString());
+*/
 
         /*classes example
             Fruit banana = new Fruit("M", "banana", "yellow");
@@ -68,13 +115,6 @@ public class Application {
         }
 */
 
-
-
-
-
-
-
-
         /*
         //args[0];
         //args[1];
@@ -87,10 +127,7 @@ public class Application {
 
 
 
-
-
-
-        /*JAR build
+        /*build CL that takes two args and does something
         public class SomeProgram {
             public static void main(String[] args) {
 
@@ -117,7 +154,7 @@ public class Application {
             System.out.println(x);
             x = x+1;
         }*/
-    }
+
 
     /*grade method
     static String grade(int input){
